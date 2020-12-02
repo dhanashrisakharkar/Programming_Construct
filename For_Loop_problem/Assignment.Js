@@ -1,16 +1,19 @@
 console.log("Welcome to For loop Assignment");
-function calculatePowerOfTwo(n) {
-    var i = 1;
-    var powerOfTwo = 1;
-  
-    while (i <= n) {
-      powerOfTwo = 2 * powerOfTwo; 
-      console.log(i + " " + powerOfTwo);
-      i = i + 1;
+function isPrimeNumber() {
+    let temp;
+    var isPrime = true;
+    for (let i = 2; i <= num / 2; i++) {
+      temp = num % i;
+      if (temp == 0) {
+        isPrime = false;
+        break;
+      }
     }
-  }
-  readline = require("readline-sync");
-  n = readline.question("Enter the index n: ");
-  console.log("Power of 2 till given number is: ");
-  calculatePowerOfTwo(parseInt(n));
   
+    if (isPrime) console.log(num + " is a Prime Number");
+    else console.log(num + " is not a Prime Number");
+  }
+  
+  readline = require("readline-sync");
+  let num = readline.question("Enter the number: ");
+  isPrimeNumber(parseInt(num));
