@@ -1,34 +1,37 @@
-function checkUnit(digitPlace) {
-  switch (digitPlace) {
+function getNum(number) {
+  switch (number) {
+    case 0:
+      console.log("Zero");
+      break;
     case 1:
-      console.log("Units");
+      console.log("One");
       break;
-    case 10:
-      console.log("Tens");
+    case 2:
+      console.log("Two");
       break;
-    case 100:
-      console.log("Hundreds");
+    case 3:
+      console.log("Three");
       break;
-    case 1000:
-      console.log("Thousands");
+    case 4:
+      console.log("Four");
       break;
-    case 10000:
-      console.log("Ten Thousands");
+    case 5:
+      console.log("Five");
       break;
-    case 100000:
-      console.log("Lakhs");
+    case 6:
+      console.log("Six");
       break;
-    case 1000000:
-      console.log("Ten Lakhs");
+    case 7:
+      console.log("Seven");
       break;
-    case 10000000:
-      console.log("Crores");
+    case 8:
+      console.log("Eight");
       break;
-    case 100000000:
-      console.log("Ten Crores");
+    case 9:
+      console.log("Nine");
       break;
     default:
-      console.log("Invalid unit");
+      console.log("Invalid Number");
   }
 }
-checkUnit(10);
+console.log(getNum(7));
