@@ -1,18 +1,34 @@
- let minNo=1
-    let maxNo=100
-    let midNo=0
-    while ( minNo <= maxNo ){
-        midNumber=parseInt( (minNo+maxNo)/2 );
-        console.log("Middle No is : "+midNo);
-        i=prompt("Enter your option :");
-        if(i === 'l')
-            maxNo=midNo;
-        else if (i === 'g')
-            minNo=midNo;
-        else if (i === 'e'){
-            console.log("Your magic number is :"+midNo);
-            break;
-        }
-        else
-            console.log("Error")
-    }
+function checkUnit(digitPlace) {
+  switch (digitPlace) {
+    case 1:
+      console.log("Units");
+      break;
+    case 10:
+      console.log("Tens");
+      break;
+    case 100:
+      console.log("Hundreds");
+      break;
+    case 1000:
+      console.log("Thousands");
+      break;
+    case 10000:
+      console.log("Ten Thousands");
+      break;
+    case 100000:
+      console.log("Lakhs");
+      break;
+    case 1000000:
+      console.log("Ten Lakhs");
+      break;
+    case 10000000:
+      console.log("Crores");
+      break;
+    case 100000000:
+      console.log("Ten Crores");
+      break;
+    default:
+      console.log("Invalid unit");
+  }
+}
+checkUnit(10);
