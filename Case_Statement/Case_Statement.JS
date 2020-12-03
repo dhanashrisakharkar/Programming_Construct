@@ -1,37 +1,33 @@
-function getNum(number) {
-  switch (number) {
-    case 0:
-      console.log("Zero");
-      break;
+function unitConversion(input, value) {
+  switch (input) {
     case 1:
-      console.log("One");
+      let inch = value * 12;
+      console.log(value + " Feet = " + inch + " Inch");
       break;
     case 2:
-      console.log("Two");
+      let meter = value * 0.3048;
+      console.log(value + " Feet = " + meter.toFixed(2) + " Meter");
       break;
     case 3:
-      console.log("Three");
+      let feet = value / 12;
+      console.log(value + " Inch = " + feet.toFixed(2) + " Feet");
       break;
     case 4:
-      console.log("Four");
-      break;
-    case 5:
-      console.log("Five");
-      break;
-    case 6:
-      console.log("Six");
-      break;
-    case 7:
-      console.log("Seven");
-      break;
-    case 8:
-      console.log("Eight");
-      break;
-    case 9:
-      console.log("Nine");
+      let feetMeter = value * 3.28084;
+      console.log(value + " Meter = " + feetMeter.toFixed(2) + " Feet");
       break;
     default:
-      console.log("Invalid Number");
+      console.log("Check your input");
   }
 }
-console.log(getNum(7));
+console.log("Enter 1 for Feet to Inch");
+console.log("Enter 2 for Feet to Meter");
+console.log("Enter 3 for Inch to Feet");
+console.log("Enter 4 for Meter to Feet");
+
+readine = require("readline-sync");
+let input = readine.question("Choose the option between 1-4: ");
+let value = readine.question(
+  "Enter the value to get converted into desired unit: "
+);
+unitConversion(parseInt(input), parseInt(value));
